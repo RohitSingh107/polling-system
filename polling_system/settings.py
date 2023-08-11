@@ -74,13 +74,27 @@ WSGI_APPLICATION = 'polling_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'mongo_data',  # Specify your MongoDB database name
+        # 'USERNAME': 'admin',
+        # 'PASSWORD': 'admin',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': 27017,
+        # 'AUTH_SOURCE': 'admin',
+        # 'CLIENT': {
+        #     'host': 'mongodb://root:example@mongo:27017/'
+        # } 
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
