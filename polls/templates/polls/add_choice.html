@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Choice to Poll</title>
+</head>
+<body>
+    <h1>Add Choice to Poll: {{ poll.question }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Choice</button>
+    </form>
+    <a href="{% url 'polls:detail' poll.id %}">Back to Poll</a>
+</body>
+</html>

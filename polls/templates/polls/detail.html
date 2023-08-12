@@ -18,5 +18,6 @@
       {% endfor %}
       <input type="submit" value="Vote" />
     </form>
+    <a href="{% url 'polls:add_choice' poll.id %}">Add Choice</a>
   </body>
 </html>

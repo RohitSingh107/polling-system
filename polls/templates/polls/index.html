@@ -1,16 +1,16 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Polling System</title>
-  </head>
-  <body>
+</head>
+<body>
     <h1>Polls</h1>
     <ul>
-      {% for poll in latest_poll_list %}
-      <li>
-        <a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a>
-      </li>
-      {% endfor %}
+    {% for poll in latest_poll_list %}
+        <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
+    {% endfor %}
     </ul>
-  </body>
+    <a href="{% url 'polls:create' %}">Create a Poll</a>
+</body>
 </html>
