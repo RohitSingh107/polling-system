@@ -2,21 +2,22 @@
 version: '3'
 
 services:
-  # web:
-  #   build: .
-  #   restart: always
-  #   command: python manage.py runserver 0.0.0.0:8000
-  #   volumes:
-  #     - .:/app
-  #   ports:
-  #     - "8000:8000"
-  #   depends_on:
-  #     - db
+  web:
+    build: .
+    restart: always
+    command: python manage.py runserver 0.0.0.0:8080
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    network_mode: "host"
 
 
   db:
     image: mongo:latest
-    # restart: always
+    restart: always
     ports:
       - "27017:27017"
     volumes:
@@ -24,3 +25,4 @@ services:
 
 volumes:
   mongo_data:
+

@@ -85,11 +85,11 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'mongo_data',  # Specify your MongoDB database name
-        # 'USERNAME': 'admin',
-        # 'PASSWORD': 'admin',
-        # 'HOST': '127.0.0.1',
+        # 'USERNAME': 'root',
+        # 'PASSWORD': 'example',
+        # 'HOST': 'mongo',
         # 'PORT': 27017,
-        # 'AUTH_SOURCE': 'admin',
+        # # 'AUTH_SOURCE': 'admin',
         # 'CLIENT': {
         #     'host': 'mongodb://root:example@mongo:27017/'
         # } 
